@@ -1,0 +1,22 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-container > * {
+    width: 100%;
+    margin: auto;
+}
+
+.invalido{
+    color: red;
+}
+
+input:read-only {
+    color: #aaa;
+    cursor: default;
+}
+
+.mat-table,.mat-paginator{
+    margin: 20px 120px;
+}

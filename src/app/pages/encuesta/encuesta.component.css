@@ -1,0 +1,24 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.example-container > * {
+    width: 50%;
+}
+
+.invalido{
+    color: red;
+}
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.example-radio-button {
+    margin: 5px;
+}

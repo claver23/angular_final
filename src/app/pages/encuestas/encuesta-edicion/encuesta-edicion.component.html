@@ -1,0 +1,52 @@
+<mat-card>Editar encuesta</mat-card>
+
+<form class="example-container" [formGroup]="form" #frmEncuesta="ngForm" (ngSubmit)="operar()">
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Id" readonly formControlName="id">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Nombres" required formControlName="nombres">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Apellido paterno" required formControlName="apePaterno">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Apellido materno" required formControlName="apeMaterno">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Edad" required formControlName="edad">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Profesión" required formControlName="profesion">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Lugar de trabajo" required formControlName="lugarTrabajo">
+  </mat-form-field>
+
+  <label id="example-radio-group-label">Lenguaje de programación preferido:</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    formControlName="lenguajePreferido">
+    <mat-radio-button class="example-radio-button" value="J">Java</mat-radio-button>
+    <mat-radio-button class="example-radio-button" value="C">C#</mat-radio-button>
+  </mat-radio-group>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="frmEncuesta.invalid">
+      <mat-icon>done</mat-icon>
+      <span>Aceptar</span>
+  </button>
+
+  <button mat-raised-button color="accent" routerLink='/app/encuestas' type="button">
+      <mat-icon>close</mat-icon>
+      <span>Cancelar</span>
+  </button>
+
+</form>
